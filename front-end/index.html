@@ -6,15 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSThesis Hub</title>
     <link rel="stylesheet" href="style.css">
-</head>
-
-
-<body>
     
-    <h1>CSThesis Hub</h1>
-    <input type="text" id="search-box" placeholder="Search the hub...">
-    <button onclick="searchThesis()">Search</button>
+</head>
+<!-- The responsiveness of this will be fix in the style.css at the end -->
+<body>
 
+    <!-- This is a where the NavBar-->
+    <div class="navbar">
+        <button onclick="location.href='account.html'">Account</button>
+        <button onclick="location.href='directory.html'">Directory</button>
+    </div>
+    <!-- This is a where the End NavBar-->
+
+<!-- This is a where the search container is, you can revise this -->
+    <div class="container">
+        <h1>CSThesis Hub</h1>
+        <input type="text" id="search-box" placeholder="Search the hub...">
+        <button class="search-btn" onclick="searchThesis()">Search</button>
+    
+    </div>
+<!-- This is a where the end of search container is, you can revise this -->
+
+
+    <script>
+        function searchThesis() {
+            let query = document.getElementById("search-box").value;
+            alert("Searching for: " + query);
+        }
+    </script>
 </body>
 
 </html>
